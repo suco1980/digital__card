@@ -1,5 +1,5 @@
 new QRCode(document.getElementById("qr-code"), {
-      text: "https://tudominio.com/card",
+      text: "http://app.karenshauling.com/",
       width: 230,
       height: 230
     });
