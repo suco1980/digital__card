@@ -8,6 +8,9 @@
 
  <link rel="stylesheet" href="CSS/QR.css">
  <link rel="stylesheet" href="CSS/BSCrep.css">
+ <link rel="manifest" href="manifest.json">
+ <meta name="theme-color" content="#ffffff">
+ <link rel="icon" href="/favicon.ico">
 
  <title>Scan My Card</title>
 
@@ -38,4 +41,11 @@
     
 </body>
 <script src="JS/QR.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Service Worker registrado"))
+      .catch((err) => console.log("Error al registrar SW:", err));
+  }
+</script>
 </html>
